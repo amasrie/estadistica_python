@@ -154,6 +154,7 @@ plt.figure(2, figsize=(10, 10))
 plt.subplot(polar=True)
 ambitos_estados = df_final.groupby('estado')['codigo'].value_counts().sort_index()
 lista_estados = np.unique(ambitos_estados.index.get_level_values('estado'))
+lista_estados = np.append(lista_estados, lista_estados[0])
 lista_par_codigos_estados = [(a, b) for a in lista_estados for b in [x for i,x in enumerate(lista_codigos) if i!=6]]
 ambitos_estados = ambitos_estados.reindex(lista_par_codigos_estados, fill_value=0)
 theta = np.linspace(0, 2*np.pi, lista_estados.size, endpoint=False)
@@ -164,4 +165,3 @@ lines, labels = plt.thetagrids(np.degrees(theta), labels=lista_estados)
 plt.legend(bbox_to_anchor=(1.12, 1.05), title="Ámbitos")
 #plt.show(block=False)
 plt.savefig('plots/radar_estados.png')
-
