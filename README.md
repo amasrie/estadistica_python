@@ -116,6 +116,6 @@ En la siguiente gráfica de barras apiladas se puede apreciar que la mayoría de
 
 3. Ámbitos por estado
 
-Este reporte muestra la distribución de los ámbitos entre los estados, sin considerar los registros de ámbito vacío para facilitar la lectura. Se puede apreciar que, en la mayoría de los estados, los reportes enviados corresponden a los ámbitos de servicios públicos y seguridad ciudadana.
+Este reporte muestra la distribución de los ámbitos entre los estados, sin considerar los registros de ámbito vacío para facilitar la lectura. Se puede apreciar que, en la mayoría de los estados, los reportes enviados corresponden a los ámbitos de servicios públicos y seguridad ciudadana. Los estados más afectados son Distrito Capital, Miranda, Zulia y Carabobo.
 
 ![Distribución de registros](plots/radar_estados.png)
