@@ -1,3 +1,4 @@
+impport os
 import numpy as np
 import pandas as pd
 import matplotlib as mpl
@@ -51,6 +52,9 @@ def weighted_median(df, wts):
 # out: flotante que representa el promedio de los elementos bajo los pesos establecidos
 def weighted_mean(df, col, wts):
     return np.sum(df[col] * df[wts]) / np.sum(df[wts])
+
+if not os.path.exists('plots'):
+    os.makedirs('plots')
 
 # Se obtienen las incidencias y llamadas
 df_incidencias = pd.read_csv ('incidencias.csv', sep=';')
