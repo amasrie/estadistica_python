@@ -94,9 +94,6 @@ print('Mediana ponderada (ordenado de mayor a menor cantidad): \n', weighted_med
 print('Moda (Ámbito): ', mode(df_final,'ambito'))
 print('Moda (Clasificación): ', mode(df_final,'clasificacion'))
 print('Moda (Estado): ', mode(df_final,'estado'))
-print('Moda (Municipio): ', df_final['municipio'].iloc[[df_final['id_municipio'].index[mode(df_final,'id_municipio')]]].values[0])
-print('Moda (Parroquia): ', df_final['parroquia'].iloc[[df_final['id_parroquia'].index[mode(df_final,'id_parroquia')]]].values[0])
-print('Moda (Cuadrante): ', df_final['cuadrante'].iloc[[df_final['id_cuadrante'].index[mode(df_final,'id_cuadrante')]]].values[0])
 print('Media (Ámbito)', mean(cuenta_final, 'cantidad'))
 print('Media ponderada: ', weighted_mean(cuenta_final, 'cantidad', 'peso'))
 
@@ -112,9 +109,6 @@ print('Mediana ponderada (descartando ambitos sin datos, ordenado de mayor a men
 print('Moda (Ámbito, descartando ambitos sin datos): ', mode(df_ambitos,'ambito'))
 print('Moda (Clasificación, descartando ambitos sin datos): ', mode(df_ambitos,'clasificacion'))
 print('Moda (Estado, descartando ambitos sin datos): ', mode(df_ambitos,'estado'))
-print('Moda (Municipio): ', df_ambitos['municipio'].iloc[[df_ambitos['id_municipio'].index[mode(df_ambitos,'id_municipio')]]].values[0])
-print('Moda (Parroquia): ', df_ambitos['parroquia'].iloc[[df_ambitos['id_parroquia'].index[mode(df_ambitos,'id_parroquia')]]].values[0])
-print('Moda (Cuadrante): ', df_ambitos['cuadrante'].iloc[[df_ambitos['id_cuadrante'].index[mode(df_ambitos,'id_cuadrante')]]].values[0])
 print('Media (Ámbito, descartando ambitos sin datos)', mean(cuenta_ambitos, 'cantidad'))
 print('Media ponderada (descartando ambitos sin datos): ', weighted_mean(cuenta_ambitos, 'cantidad', 'peso'))
 
