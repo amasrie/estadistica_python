@@ -89,7 +89,6 @@ cuenta_final = pd.DataFrame({
     'peso': pesos
 })
 cuenta_final.reset_index(inplace=True)
-print(cuenta_final)
 print('Mediana: \n', median(df_final))
 print('Mediana ponderada (ordenado de mayor a menor cantidad): \n', weighted_median(cuenta_final, 'peso'))
 print('Moda (Ámbito): ', mode(df_final,'ambito'))
@@ -108,7 +107,6 @@ cuenta_ambitos = pd.DataFrame({
     'peso': [x for i,x in enumerate(pesos) if i!=6]
 })
 cuenta_ambitos.reset_index(inplace=True)
-print(cuenta_ambitos)
 print('Mediana (descartando ambitos sin datos): \n', median(df_ambitos))
 print('Mediana ponderada (descartando ambitos sin datos, ordenado de mayor a menor cantidad): \n', weighted_median(cuenta_ambitos, 'peso'))
 print('Moda (Ámbito, descartando ambitos sin datos): ', mode(df_ambitos,'ambito'))
@@ -124,7 +122,6 @@ print('Media ponderada (descartando ambitos sin datos): ', weighted_mean(cuenta_
 # 1. Pie chart que compara incidencias, llamadas e intentos de llamada
 plt.figure(0)
 totales = df_final['tipo'].value_counts().sort_index()
-print(totales)
 plt.pie(totales, labels= ['Intentos', 'Llamadas', 'Incidencias'], autopct='%1.2f%%')
 plt.title("Distribución de reportes")
 #plt.show(block=False)
@@ -138,7 +135,6 @@ lista_tipos = np.unique(ambitos_tipos.index.get_level_values('tipo'))
 lista_par_codigos_tipos = [(a, b) for a in lista_codigos for b in lista_tipos]
 ambitos_tipos = ambitos_tipos.reindex(lista_par_codigos_tipos, fill_value=0)
 ancho = 0.5
-print(ambitos_tipos)
 plt.bar(lista_codigos, ambitos_tipos[:, 2], ancho, label='Incidencias')
 plt.bar(lista_codigos, ambitos_tipos[:, 1], ancho, label='Llamadas', bottom=ambitos_tipos[:, 2])
 plt.bar(lista_codigos, ambitos_tipos[:, 0], ancho, label='Intentos', bottom=ambitos_tipos[:, 1])
