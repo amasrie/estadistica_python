@@ -43,7 +43,7 @@ def weighted_median(df, wts):
         if acc >= total / 2:
             even = True if acc == total / 2 else False
             break
-    return df.iloc[[idx, idx+1]] if even else df.iloc[[idx]]
+    return df.iloc[[idx-1, idx]] if even else df.iloc[[idx-1]]
 
 # Función weighted_mean: calcula la media ponderada de un listado de elementos
 # in df: DataFrame de elementos a utilizar
