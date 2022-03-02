@@ -81,8 +81,8 @@ Con esta información, se realizan los siguientes ćalculos:
 * Se obtiene la mediana ponderada con la lista de pesos indicada anteriormente. En este caso, se ordenó por ámbitos por tener menos variedad:
 
 ```sh
-    index  cantidad  peso
-3  SALUD       208     2
+   index  cantidad  peso
+2  OTRA         7     1
 ```
 
 * La moda por ámbito (y por lo tanto por clasificación) es `Sin datos`, la moda por estado es `Distrito Capital`.
